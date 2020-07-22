@@ -1,0 +1,102 @@
+[inputs/single_fred_series%3A%2F%2FINDPRO]
+owner = admin
+version = 8.0.1
+modtime = 1579365212.832587000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA_federal_reserve%23configs%2Fconf-ta_federal_reserve_settings%3Aadditional_parameters%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 8.0.1
+modtime = 1581813715.370680000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA_federal_reserve%23configs%2Fconf-ta_federal_reserve_settings%3Aadditional_parameters%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 8.0.1
+modtime = 1581813715.418461000
+
+[ta_federal_reserve_settings/additional_parameters]
+version = 8.0.1
+modtime = 1581813715.428447000
+
+[props/fred%3Aseries]
+owner = admin
+version = 8.0.1
+modtime = 1581813281.245114000
+
+[props/source%3A%3A...ta_federal_reserve%2A.log%2A]
+owner = admin
+version = 8.0.1
+modtime = 1581813282.069657000
+
+[props/fred%3Aseries%3Alist]
+owner = admin
+version = 8.0.1
+modtime = 1582224275.491842000
+
+[indexes/fred_data]
+owner = admin
+version = 8.0.1
+modtime = 1592474404.783985000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA_federal_reserve%23configs%2Fconf-ta_federal_reserve_account%3Aadmin%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 8.0.1
+modtime = 1583696561.685230000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA_federal_reserve%23configs%2Fconf-ta_federal_reserve_account%3Aadmin%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 8.0.1
+modtime = 1583696561.699702000
+
+[ta_federal_reserve_account/admin]
+owner = admin
+version = 8.0.1
+modtime = 1583696561.712096000
+
+[props/fred%3Aapi_test_01]
+owner = admin
+version = 8.0.1
+modtime = 1589119309.653802000
+
+[inputs/fred_series%3A%2F%2FUNRATE]
+owner = admin
+version = 8.0.1
+modtime = 1591835000.486833000
+
+[collections/TA_mts_federal_reserve_checkpointer]
+owner = splunk-system-user
+version = 8.0.1
+modtime = 1591834037.492105000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA_mts_federal_reserve%23configs%2Fconf-ta_mts_federal_reserve_settings%3Aadditional_parameters%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 8.0.1
+modtime = 1591834213.854274000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA_mts_federal_reserve%23configs%2Fconf-ta_mts_federal_reserve_settings%3Aadditional_parameters%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 8.0.1
+modtime = 1591834213.860356000
+
+[ta_mts_federal_reserve_settings/additional_parameters]
+version = 8.0.1
+modtime = 1591834213.865256000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA_mts_federal_reserve%23configs%2Fconf-ta_mts_federal_reserve_account%3Aadmin%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 8.0.1
+modtime = 1595090166.938524000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA_mts_federal_reserve%23configs%2Fconf-ta_mts_federal_reserve_account%3Aadmin%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 8.0.1
+modtime = 1595090166.944818000
+
+[ta_mts_federal_reserve_account/admin]
+owner = admin
+version = 8.0.1
+modtime = 1595090166.950361000
+
+[inputs/fred_series_list%3A%2F%2FFRED_Default_List]
+owner = admin
+version = 8.0.1
+modtime = 1595099166.287044000

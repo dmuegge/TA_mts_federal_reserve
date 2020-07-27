@@ -25,6 +25,11 @@ def validate_input(helper, definition):
     # series_id = definition.parameters.get('series_id', None)
     # seed_date = definition.parameters.get('seed_date', None)
     # reset_checkpoint = definition.parameters.get('reset_checkpoint', None)
+    
+    
+    
+    
+    
     pass
 
 def collect_events(helper, ew):
@@ -65,19 +70,15 @@ def collect_events(helper, ew):
     # (log_level can be "debug", "info", "warning", "error" or "critical", case insensitive)
     helper.set_log_level(log_level)
 
-    #last_checkpoint = helper.get_check_point('dt_st')
+    # get last checkpoint and use default if not exist
     chkpoint_name = series_id + '_ck_dt'
     last_checkpoint = helper.get_check_point(chkpoint_name)
     if not last_checkpoint:
         start_date = helper.get_arg('seed_date')
     else:
-        if helper.get_arg('reset_checkpoint'):
-            start_date = helper.get_arg('seed_date')
-        else:
-            start_date = last_checkpoint
+        start_date = last_checkpoint
 
     dt_today = datetime.date.today()
-
     end_date = dt_today.strftime('%Y-%m-%d')
     
 

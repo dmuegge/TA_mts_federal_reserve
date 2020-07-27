@@ -114,21 +114,13 @@ def collect_events(helper, ew):
         try:
             
             chkpoint_name = series_id + '_ck_dt'
-            
-            if reset_seed_date:
-                helper.delete_check_point(chkpoint_name)
-            
             last_checkpoint = helper.get_check_point(chkpoint_name)
             if not last_checkpoint:
                 start_date = helper.get_arg('seed_date')
             else:
-                if helper.get_arg('reset_checkpoint'):
-                    start_date = helper.get_arg('seed_date')
-                else:
-                    start_date = last_checkpoint
+                start_date = last_checkpoint
         
             dt_today = datetime.date.today()
-        
             end_date = dt_today.strftime('%Y-%m-%d')
             
         

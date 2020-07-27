@@ -198,10 +198,6 @@
                         "label": "Seed Date"
                     },
                     {
-                        "field": "reset_checkpoint",
-                        "label": "Reset Checkpoint"
-                    },
-                    {
                         "field": "u_splunk_kv_server",
                         "label": "Splunk KV Store Server"
                     },
@@ -212,10 +208,6 @@
                     {
                         "field": "lookup_name",
                         "label": "Lookup Name"
-                    },
-                    {
-                        "field": "reset_seed_date",
-                        "label": "Reset Seed Date"
                     }
                 ],
                 "actions": [
@@ -303,7 +295,7 @@
                             "field": "seed_date",
                             "label": "Seed Date",
                             "help": "Initial Start Date",
-                            "required": false,
+                            "required": true,
                             "type": "text",
                             "defaultValue": "1970-01-02",
                             "validators": [
@@ -314,13 +306,6 @@
                                     "errorMsg": "Max length of text input is 8192"
                                 }
                             ]
-                        },
-                        {
-                            "field": "reset_checkpoint",
-                            "label": "Reset Checkpoint",
-                            "help": "Reset Checkpoint to Seed Date",
-                            "required": false,
-                            "type": "checkbox"
                         }
                     ]
                 },
@@ -432,8 +417,9 @@
                             "field": "seed_date",
                             "label": "Seed Date",
                             "help": "Seed start date",
-                            "required": false,
+                            "required": true,
                             "type": "text",
+                            "defaultValue": "1970-01-02",
                             "validators": [
                                 {
                                     "type": "string",
@@ -441,17 +427,7 @@
                                     "maxLength": 8192,
                                     "errorMsg": "Max length of text input is 8192"
                                 }
-                            ],
-                            "options": {
-                                "placeholder": "1970-01-02"
-                            }
-                        },
-                        {
-                            "field": "reset_seed_date",
-                            "label": "Reset Seed Date",
-                            "help": "Reset Seed Date to date provided",
-                            "required": false,
-                            "type": "checkbox"
+                            ]
                         }
                     ]
                 }

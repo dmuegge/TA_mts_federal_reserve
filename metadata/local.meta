@@ -52,11 +52,6 @@ owner = admin
 version = 8.0.1
 modtime = 1583696561.712096000
 
-[props/fred%3Aapi_test_01]
-owner = admin
-version = 8.0.1
-modtime = 1589119309.653802000
-
 [inputs/fred_series%3A%2F%2FUNRATE]
 owner = admin
 version = 8.0.1
@@ -69,34 +64,57 @@ modtime = 1591834037.492105000
 
 [passwords/credential%3A__REST_CREDENTIAL__%23TA_mts_federal_reserve%23configs%2Fconf-ta_mts_federal_reserve_settings%3Aadditional_parameters%60%60splunk_cred_sep%60%601%3A]
 owner = admin
-version = 8.0.1
-modtime = 1591834213.854274000
+version = 8.0.4.1
+modtime = 1595689048.112400900
 
 [passwords/credential%3A__REST_CREDENTIAL__%23TA_mts_federal_reserve%23configs%2Fconf-ta_mts_federal_reserve_settings%3Aadditional_parameters%60%60splunk_cred_sep%60%602%3A]
 owner = admin
-version = 8.0.1
-modtime = 1591834213.860356000
+version = 8.0.4.1
+modtime = 1595689048.138402100
 
 [ta_mts_federal_reserve_settings/additional_parameters]
-version = 8.0.1
-modtime = 1591834213.865256000
+version = 8.0.4.1
+modtime = 1595689048.160402800
 
 [passwords/credential%3A__REST_CREDENTIAL__%23TA_mts_federal_reserve%23configs%2Fconf-ta_mts_federal_reserve_account%3Aadmin%60%60splunk_cred_sep%60%601%3A]
 owner = admin
-version = 8.0.1
-modtime = 1595090166.938524000
+version = 8.0.4.1
+modtime = 1595689006.195451900
 
 [passwords/credential%3A__REST_CREDENTIAL__%23TA_mts_federal_reserve%23configs%2Fconf-ta_mts_federal_reserve_account%3Aadmin%60%60splunk_cred_sep%60%602%3A]
 owner = admin
-version = 8.0.1
-modtime = 1595090166.944818000
+version = 8.0.4.1
+modtime = 1595689006.220472200
 
 [ta_mts_federal_reserve_account/admin]
 owner = admin
-version = 8.0.1
-modtime = 1595090166.950361000
+version = 8.0.4.1
+modtime = 1595689006.244452300
 
 [inputs/fred_series_list%3A%2F%2FFRED_Default_List]
 owner = admin
-version = 8.0.1
-modtime = 1595099166.287044000
+version = 8.0.4.1
+modtime = 1595689440.465054100
+
+[nav/default]
+version = 8.0.4.1
+modtime = 1595691438.196849000
+
+[views/fred_default_list]
+owner = admin
+version = 8.0.4.1
+modtime = 1595818796.039153200
+
+[views/fred_checkpoint_manage]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 8.0.4.1
+modtime = 1595692748.506700400
+
+[transforms/federal_reserve_checkpoint]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = admin
+version = 8.0.4.1
+modtime = 1595692482.534210000

@@ -1,0 +1,71 @@
+<form script="fred_checkpoint_crud.js" stylesheet="fred_checkpoint_crud_style.css" theme="light">
+  <label>FRED Checkpoint Manage</label>
+  <search id="updateSearch" depends="$update_key_tok$, $update_state_tok$">
+    <query>
+      | inputlookup federal_reserve_checkpoint
+      | eval key=_key 
+      | WHERE key="$update_key_tok$" 
+      | eval state="$update_state_tok$" 
+      | outputlookup federal_reserve_checkpoint append=t
+    </query>
+  </search>
+  
+  <search id="deleteSearch" depends="$delete_key_tok$">
+    <query>
+      | inputlookup federal_reserve_checkpoint | eval key=_key | WHERE NOT key="$delete_key_tok$" | outputlookup federal_reserve_checkpoint
+    </query>
+  </search>
+  <fieldset submitButton="false">
+    
+    
+  </fieldset>
+  <row>
+    <panel id="serieslistDisplayPanel">
+      <table id="serieslistDisplayTable">
+        <search id="serieslistDisplaySearch">
+          <query>
+          | inputlookup federal_reserve_checkpoint | eval Key = _key | eval Update="Update" | eval Delete="Delete" | table _key,Key,state,Update,Delete | sort Key</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">20</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">cell</option>
+        <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <drilldown>
+          <condition field="state">
+            <link>
+              <![CDATA[
+               /app/splunk_quantitative_finance/fred_list_detail_drilldown?form.state=$row.state$&form._key=$row._key$
+             ]]>
+            </link>
+          </condition>
+        </drilldown>
+      </table>
+    </panel>
+    <panel id="serieslistFormPanel">
+      <html>
+        <form>
+          <div>
+          	<label for="state">State</label>
+          	<input style="width: 95%" type="text" name="State"/>
+          </div>
+          
+          <div>
+          	<label for="_key">Key</label>
+          	<input style="width: 95%" type="text" name="_key" disabled="true"/>
+          </div>
+          
+          <div>
+            <button id="submitButton">Submit</button>
+          </div>
+        </form>
+      </html>
+    </panel>
+  </row>
+</form>

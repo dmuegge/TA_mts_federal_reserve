@@ -45,20 +45,13 @@ fields = [
     ), 
     field.RestField(
         'seed_date',
-        required=False,
+        required=True,
         encrypted=False,
         default='1970-01-02',
         validator=validator.String(
             min_len=0, 
             max_len=8192, 
         )
-    ), 
-    field.RestField(
-        'reset_checkpoint',
-        required=False,
-        encrypted=False,
-        default=None,
-        validator=None
     ), 
 
     field.RestField(

@@ -17,20 +17,10 @@ modtime = 1581813715.418461000
 version = 8.0.1
 modtime = 1581813715.428447000
 
-[props/fred%3Aseries]
-owner = admin
-version = 8.0.1
-modtime = 1581813281.245114000
-
 [props/source%3A%3A...ta_federal_reserve%2A.log%2A]
 owner = admin
 version = 8.0.1
 modtime = 1581813282.069657000
-
-[props/fred%3Aseries%3Alist]
-owner = admin
-version = 8.0.1
-modtime = 1582224275.491842000
 
 [indexes/fred_data]
 owner = admin
@@ -118,3 +108,25 @@ export = system
 owner = admin
 version = 8.0.4.1
 modtime = 1595692482.534210000
+
+[lookups/TA_federal_reserve_fredbase_list.csv]
+owner = admin
+version = 8.0.4.1
+modtime = 1597226223.228993300
+
+[transforms/FRED_Base_List]
+access = read : [ * ]
+export = system
+owner = admin
+version = 8.0.4.1
+modtime = 1597226611.551166700
+
+[props/fred%3Aseries%3Alist]
+owner = admin
+version = 8.0.4.1
+modtime = 1597227606.131021400
+
+[props/fred%3Aseries]
+owner = admin
+version = 8.0.4.1
+modtime = 1597227620.495298800

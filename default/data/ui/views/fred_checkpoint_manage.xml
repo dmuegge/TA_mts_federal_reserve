@@ -5,7 +5,7 @@
       | inputlookup federal_reserve_checkpoint
       | eval key=_key 
       | WHERE key="$update_key_tok$" 
-      | eval state="$update_state_tok$" 
+      | eval state="\"$update_state_tok$\"" 
       | outputlookup federal_reserve_checkpoint append=t
     </query>
   </search>

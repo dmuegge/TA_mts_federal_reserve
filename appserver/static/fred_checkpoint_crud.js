@@ -64,11 +64,21 @@ require([
 		if(_key_Input.val() != '') {
 			/* --- this is an update --- */
 			tokens.set('update_key_tok', _key_Val);
-			tokens.set('update_state_tok', state_Input.val());
 
+			// need to remove and re-add quotes with escape "\" TOKEN \""
 
 			console.log(_key_Val);
 			console.log(state_Input.val());
+			var state_text = state_Input.val().replace(/"/g,"")
+			console.log(state_text);
+
+
+
+			tokens.set('update_state_tok', state_text);
+
+
+			
+			
 			updateSearch.startSearch();
 			
 		} 

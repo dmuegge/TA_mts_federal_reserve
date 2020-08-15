@@ -1,0 +1,26 @@
+<form script="fred_default_list_load.js">
+  <label>Initial Setup</label>
+  <search id="reloadBaseFREDList">
+    <query>
+      | inputlookup FRED_Base_List | outputlookup FRED_Default_List
+    </query>
+  </search>
+  
+  <row>
+    <panel>
+      
+      <html>
+        <h3>
+          <b>Default FRED List Data Load</b>
+        </h3>
+        If you would like to start with the default list of FRED data series this page populates the list with a a base set of data series.<br/>
+        <br/>
+        The default list is also the base set of data used by the Economic Analysis for Splunk app.<br/><br/>
+        
+        <button class="btn btn-xs btn-primary" id="LoadList">LoadList</button>
+        
+      </html>
+    </panel>
+  </row>
+  
+</form>

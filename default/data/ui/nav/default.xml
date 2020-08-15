@@ -1,5 +1,15 @@
-<nav search_view="search" color="#297ba5">
+<nav search_view="search">
 <view name="inputs" default="true" />
-<view name="configuration"/>
+
+<collection label="Configuration">
+  	<view name="initial_setup"/>
+	<view name="configuration"/>
+    <view name="fred_default_list" />
+  <view name="fred_checkpoint_manage" />
+    
+</collection>
+  
+  
+  
 <view name="search" label="Search"/>
 </nav>

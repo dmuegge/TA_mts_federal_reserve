@@ -88,7 +88,7 @@ modtime = 1596786353.765943500
 
 [nav/default]
 version = 8.0.4.1
-modtime = 1595691438.196849000
+modtime = 1597501051.433125200
 
 [views/fred_default_list]
 owner = admin
@@ -100,7 +100,7 @@ access = read : [ * ], write : [ admin ]
 export = none
 owner = admin
 version = 8.0.4.1
-modtime = 1595692748.506700400
+modtime = 1597511682.121427800
 
 [transforms/federal_reserve_checkpoint]
 access = read : [ * ], write : [ admin ]
@@ -130,3 +130,17 @@ modtime = 1597227606.131021400
 owner = admin
 version = 8.0.4.1
 modtime = 1597227620.495298800
+
+[views/configuration]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 8.0.4.1
+modtime = 1597502856.858118300
+
+[views/initial_setup]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 8.0.4.1
+modtime = 1597504338.643207400

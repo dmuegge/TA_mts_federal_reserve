@@ -15,13 +15,13 @@ Keep your API key handy you will need it later.
 1. Download the app install file from SplunkBase or Github releases and save it in an easily accessible place.
 2. The add-on consists of a modular input and a KVStore list used by the input. 
    - The add-on would be installed on a search head where the FRED_Default_List will be populated
-   - The add-on may also me installed on a heavy forwarder to configure the input portion and offload processing from the search head
+   - The add-on may also be installed on a heavy forwarder to configure the input portion and offload processing from the search head
 
 ## Configuring the FRED Add-On for Splunk
-The initial installation of the add-on is pretty straight forward. it consists of a few simple steps.
+The initial installation of the add-on is pretty straight forward. It consists of a few simple steps.
 
 1. Create an index for your data
-   - strongly recommended name 'fred_data'. This name will allow for a no configuration installation of the Economic Analysis for Splunk app.
+   - Strongly recommended name 'fred_data'. This name will allow for a no configuration installation of the Economic Analysis for Splunk app.
 2. Populating the FRED_Default_List KVStore lookup list.
    - The FRED Default List provides two main functions
       1. It tells the add-on what FRED data series to retrieve

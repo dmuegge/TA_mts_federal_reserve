@@ -17,7 +17,7 @@
         <br/>
         The default list is also the base set of data used by the Economic Analysis for Splunk app.<br/><br/>
         
-        <button class="btn btn-xs btn-primary" id="LoadList">LoadList</button>
+        <button class="btn btn-xs btn-primary" id="LoadList">Load List</button>
         
       </html>
     </panel>

@@ -144,3 +144,8 @@ export = none
 owner = admin
 version = 8.0.4.1
 modtime = 1597504338.643207400
+
+[props/gurufocus%3Asummary]
+owner = admin
+version = 8.0.4.1
+modtime = 1599870845.302258000

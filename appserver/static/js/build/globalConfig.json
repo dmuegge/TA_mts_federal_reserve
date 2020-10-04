@@ -2,7 +2,7 @@
     "meta": {
         "name": "TA_mts_federal_reserve",
         "displayName": "FRED Add-On for Splunk",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "apiVersion": "3.0.0",
         "restRoot": "TA_mts_federal_reserve"
     },

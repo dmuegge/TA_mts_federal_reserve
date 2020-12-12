@@ -23,15 +23,3 @@ Resolved the following issues:
 Sourcetype(s):				fred:series, fred:series:list
 Supported Technologies:		Federal Reserve Economic Data API
 Compatible Solutions:		Economic Analysis App for Splunk
-							
-
-###### Installation Instructions ######
-
-
-
-###### Troubleshooting the add-on ######
-
-
-
-###### Getting Help ######
-

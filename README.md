@@ -36,21 +36,21 @@ The initial installation of the add-on is pretty straight forward. It consists o
         - Click on Configuration-->Initial Setup in the add-on drop down menu.
         - Click the LoadList button
         - Click OK to confirm the warning and the complete message
-  ![Default List Initialize](/appserver/static/ta-default-list.png)
+  ![Default List Initialize](/app/appserver/static/ta-default-list.png)
 
 3. Setting up credentials for the KVStore Server
    - This is simply Splunk login credentials the add-on uses to authenticate to the KVStore Server, which could be the local server or possibly the search head if you are running the input function on a heavy forwarder.
    - Click Configuration-->Account
    - Click the add button
    - Complete account name, user, and password and save.
-  ![KVStore Account Setup](/appserver/static/ta-account_setup.png)
+  ![KVStore Account Setup](/app/appserver/static/ta-account_setup.png)
   
 4. Entering the FRED API key
    - This step is to enter the API key obtained from FRED
    - Click Configuration-->Add-On Settings
    - Enter FRED API Key
    - Click the Save button
-  ![FRED API Key Setup](/appserver/static/ta-api_key_setup.png)
+  ![FRED API Key Setup](/app/appserver/static/ta-api_key_setup.png)
   
 5. Setting up the input definition
    - The FRED Add-On for Splunk supports two types of inputs one input which can be used to setup a single series. This input will rarely be used as second input type uses a list and the input will just retrieve data for all series maintained in the list so no need for separate inputs. To setup the FRED Default List Input complete the following:
@@ -58,7 +58,7 @@ The initial installation of the add-on is pretty straight forward. It consists o
      - Click Create New Input --> FRED Series List
      - Complete input form options
      - Click Save  
-   ![FRED API Key Setup](/appserver/static/ta-input_setup_2.png)
+   ![FRED API Key Setup](/app/appserver/static/ta-input_setup_2.png)
 
 
 ## Using the FRED Add-On for Splunk

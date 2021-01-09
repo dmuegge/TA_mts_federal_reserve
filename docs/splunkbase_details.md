@@ -55,7 +55,35 @@ The initial installation of the add-on is pretty straight forward. It consists o
      - Click Save  
   ![FRED API Key Setup](/appserver/static/ta-input_setup_2.png)
 
+## Splunk Custom Command - fred
+The FRED Add-On for Splunk also includes a custom command that will get data from the FRED API in real-time. Below is an example of getting 10-Year Treasury Rates
+
+| fred series_id=DGS10 start_date=2015-01-01 end_date=2020-11-01
+
+The fred command uses the FRED api key configured in the add-on setup
+
 ## Using the FRED Add-On for Splunk
 The easiest way to get started with the FRED Add-On for Splunk is to install the Economic Analysis for Splunk app, which comes with a base set of dashboards and searches to get you started with the FRED data in Splunk.
 
+## Change History
+<table>
+<tr><td>Version</td><td>Changes</td></tr>
 
+<tr><td>0.1.0</td>
+<td>Initial Release
+</td></tr>
+<tr><td>0.1.1</td>
+<td>Update app.conf naming and spelling issue
+</td></tr>
+<tr><td>0.1.2</td>
+<td>
+<ul>
+<li>Added additional error handling for data removed from FRED API
+<li>Removed series ID's GOLDAMGBD228NLBM & SLVPRUSD from default list<br>
+   <ul>
+      <li>they are no longer available via the FRED API
+   </ul>
+<li>Updated sourcetype configuration
+<li>Added fred custom command to query API in realtime
+<li>Updated sourcetype names for future interoperability
+</td></tr>

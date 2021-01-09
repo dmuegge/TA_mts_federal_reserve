@@ -35,7 +35,7 @@ fields = [
     ), 
     field.RestField(
         'series_id',
-        required=False,
+        required=True,
         encrypted=False,
         default=None,
         validator=validator.String(

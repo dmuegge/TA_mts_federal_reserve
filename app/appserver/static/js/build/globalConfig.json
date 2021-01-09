@@ -2,7 +2,7 @@
     "meta": {
         "name": "TA_mts_federal_reserve",
         "displayName": "FRED Add-On for Splunk",
-        "version": "0.1.1",
+        "version": "0.1.2",
         "apiVersion": "3.0.0",
         "restRoot": "TA_mts_federal_reserve"
     },
@@ -198,16 +198,16 @@
                         "label": "Seed Date"
                     },
                     {
+                        "field": "lookup_name",
+                        "label": "FRED List"
+                    },
+                    {
                         "field": "u_splunk_kv_server",
-                        "label": "Splunk KV Store Server"
+                        "label": "KV Store Server"
                     },
                     {
                         "field": "global_account",
                         "label": "Global Account"
-                    },
-                    {
-                        "field": "lookup_name",
-                        "label": "Lookup Name"
                     }
                 ],
                 "actions": [
@@ -279,8 +279,8 @@
                         {
                             "field": "series_id",
                             "label": "Series ID",
-                            "help": "FRED Series ID",
-                            "required": false,
+                            "help": "Series ID from FRED website",
+                            "required": true,
                             "type": "text",
                             "validators": [
                                 {
@@ -294,7 +294,7 @@
                         {
                             "field": "seed_date",
                             "label": "Seed Date",
-                            "help": "Initial Start Date",
+                            "help": "",
                             "required": true,
                             "type": "text",
                             "defaultValue": "1970-01-02",
@@ -310,8 +310,8 @@
                     ]
                 },
                 {
-                    "name": "fred_series_list",
-                    "title": "FRED Series List",
+                    "name": "fred_list",
+                    "title": "FRED List",
                     "entity": [
                         {
                             "field": "name",
@@ -368,9 +368,25 @@
                             ]
                         },
                         {
+                            "field": "lookup_name",
+                            "label": "FRED List",
+                            "help": "FRED Series Lookup List Name ",
+                            "required": true,
+                            "type": "text",
+                            "defaultValue": "TA_federal_reserve_default_list",
+                            "validators": [
+                                {
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "maxLength": 8192,
+                                    "errorMsg": "Max length of text input is 8192"
+                                }
+                            ]
+                        },
+                        {
                             "field": "u_splunk_kv_server",
-                            "label": "Splunk KV Store Server",
-                            "help": "Splunk KV Store Server",
+                            "label": "KV Store Server",
+                            "help": "KV Store List Server",
                             "required": true,
                             "type": "text",
                             "defaultValue": "127.0.0.1",
@@ -381,10 +397,7 @@
                                     "maxLength": 8192,
                                     "errorMsg": "Max length of text input is 8192"
                                 }
-                            ],
-                            "options": {
-                                "placeholder": "127.0.0.1"
-                            }
+                            ]
                         },
                         {
                             "field": "global_account",
@@ -397,26 +410,9 @@
                             }
                         },
                         {
-                            "field": "lookup_name",
-                            "label": "Lookup Name",
-                            "help": "FRED Default List",
-                            "required": true,
-                            "type": "singleSelect",
-                            "defaultValue": "TA_federal_reserve_default_list",
-                            "options": {
-                                "disableSearch": true,
-                                "autoCompleteFields": [
-                                    {
-                                        "value": "TA_federal_reserve_default_list",
-                                        "label": "FRED_Default_List"
-                                    }
-                                ]
-                            }
-                        },
-                        {
                             "field": "seed_date",
                             "label": "Seed Date",
-                            "help": "Seed start date",
+                            "help": "",
                             "required": true,
                             "type": "text",
                             "defaultValue": "1970-01-02",

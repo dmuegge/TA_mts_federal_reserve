@@ -47,11 +47,11 @@ class ModInputfred_series(modinput_wrapper.base_modinput.BaseModInput):
         For other input types, arguments should be get from input_module. Defining new input types could be easier.
         """
         scheme.add_argument(smi.Argument("series_id", title="Series ID",
-                                         description="FRED Series ID",
-                                         required_on_create=False,
+                                         description="Series ID from FRED website",
+                                         required_on_create=True,
                                          required_on_edit=False))
         scheme.add_argument(smi.Argument("seed_date", title="Seed Date",
-                                         description="Initial Start Date",
+                                         description="",
                                          required_on_create=True,
                                          required_on_edit=False))
         return scheme

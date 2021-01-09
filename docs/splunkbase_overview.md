@@ -2,6 +2,8 @@
 
 The FRED&#174; Add-On for Splunk provides a way to easily retrieve FRED (Federal Reserve Economic Database) data and send into Splunk.
 
+GitHub Repository: https://github.com/dmuegge/TA_mts_federal_reserve
+
 "This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis."
 https://fred.stlouisfed.org/docs/api/terms_of_use.html
 

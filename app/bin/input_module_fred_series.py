@@ -94,21 +94,25 @@ def collect_events(helper, ew):
     
     # get response status code
     r_status = response.status_code
+    
+    
     # check the response status, if the status is not sucessful, raise requests.HTTPError
-    response.raise_for_status()
-
-    fred_series_data = prep_fred_data(start_date,series_id,r_json)
-
-    if fred_series_data:
-        for rc in fred_series_data:
-            event_time = int(time.mktime(time.strptime(str(rc['Date']), "%Y-%m-%d")))
+    if r_status > 200:
+        helper.log_info("HTTP Error: {} for URL: {}".format(r_status,url))
     
-            # To create a splunk event
-            evt_json = json.dumps(rc)
-            event = helper.new_event(evt_json, time=event_time, host=evt_host, index=evt_index, source=evt_source,
-                                     sourcetype=evt_sourcetype, done=True,
-                                     unbroken=True)
-            ew.write_event(event)
-    
-        helper.save_check_point(chkpoint_name, str(rc['Date']))
+    else:
+        fred_series_data = prep_fred_data(start_date,series_id,r_json)
+
+        if fred_series_data:
+            for rc in fred_series_data:
+                event_time = int(time.mktime(time.strptime(str(rc['Date']), "%Y-%m-%d")))
+        
+                # To create a splunk event
+                evt_json = json.dumps(rc)
+                event = helper.new_event(evt_json, time=event_time, host=evt_host, index=evt_index, source=evt_source,
+                                         sourcetype=evt_sourcetype, done=True,
+                                         unbroken=True)
+                ew.write_event(event)
+        
+            helper.save_check_point(chkpoint_name, str(rc['Date']))
     

@@ -1,0 +1,8 @@
+0.1.2 (2021-01-02)
+Resolved the following issues:
+- Added additional error handling for data removed from FRED API
+- Removed series ID's GOLDAMGBD228NLBM & SLVPRUSD from default list
+    they are no longer available via the FRED API
+- Updated sourcetype configuration
+- Added fred custom command to query API in realtime
+- Updated sourcetype names for future interoperability
